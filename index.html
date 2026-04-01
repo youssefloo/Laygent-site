@@ -2,16 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
   <title>Laygent</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     html, body {
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
+      width: 100%;
     }
 
     body {
@@ -22,78 +30,94 @@
 </head>
 
 <body class="relative min-h-screen overflow-x-hidden">
-  <div class="absolute top-[-140px] left-[-140px] w-[360px] h-[360px] bg-blue-300 opacity-25 blur-[140px] rounded-full pointer-events-none"></div>
-  <div class="absolute bottom-[-140px] right-[-140px] w-[360px] h-[360px] bg-indigo-300 opacity-25 blur-[140px] rounded-full pointer-events-none"></div>
+  <!-- BACKGROUND BLOBS WRAPPED TO PREVENT HORIZONTAL SCROLL -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-[-140px] left-[-140px] h-[360px] w-[360px] rounded-full bg-blue-300 opacity-25 blur-[140px]"></div>
+    <div class="absolute bottom-[-140px] right-[-140px] h-[360px] w-[360px] rounded-full bg-indigo-300 opacity-25 blur-[140px]"></div>
+  </div>
 
-  <div class="relative z-10 min-h-screen flex flex-col px-6 py-6 md:h-screen md:overflow-hidden">
-    
-    <div class="w-full max-w-6xl mx-auto flex justify-between items-center">
+  <!-- PAGE SHELL -->
+  <div class="relative z-10 min-h-screen flex flex-col px-4 py-5 sm:px-6 sm:py-6 md:h-screen md:overflow-hidden">
+    <!-- NAV -->
+    <div class="mx-auto w-full max-w-6xl flex items-center justify-between">
+      <!-- LOGO -->
       <div class="flex items-center gap-1 text-[#223b63]">
-        <span class="text-[20px] md:text-[22px] font-extrabold tracking-tight leading-none">LAY</span>
-        <span class="border border-[#223b63] px-2 py-[3px] rounded-[10px] text-[15px] md:text-[18px] font-extralight tracking-tight leading-none">
+        <span class="text-[20px] font-extrabold tracking-tight leading-none md:text-[22px]">
+          LAY
+        </span>
+        <span class="rounded-[10px] border border-[#223b63] px-2 py-[1px] text-[15px] font-extralight tracking-tight leading-none md:text-[18px]">
           GENT
         </span>
       </div>
 
+      <!-- PRIVATE BETA -->
       <div
-        class="text-[12px] md:text-[14px] px-3 md:px-4 py-[6px] rounded-full text-[#223b63] leading-none"
+        class="rounded-full px-3 py-[6px] text-[12px] leading-none text-[#223b63] md:px-4 md:text-[14px]"
         style="border: 0.5px solid rgba(27,64,112,0.5);"
       >
         Private Beta
       </div>
     </div>
 
-    <div class="flex-1 flex flex-col items-center justify-center py-8 md:py-0">
-      <div class="text-center max-w-3xl">
-        <h1 class="text-[28px] sm:text-[38px] md:text-[52px] font-semibold text-[#223b63] leading-[1.15]">
+    <!-- CENTER CONTENT -->
+    <div class="flex flex-1 flex-col items-center justify-center py-8 md:py-0">
+      <!-- HERO -->
+      <div class="max-w-3xl text-center">
+        <h1 class="text-[28px] font-semibold leading-[1.15] text-[#223b63] sm:text-[38px] md:text-[52px]">
           Your Product Already Has
-          <br class="hidden sm:block"/>
+          <br class="hidden sm:block" />
           a Structure.
           <span class="text-[#3b82f6]"> We Reveal It.</span>
         </h1>
 
-        <p class="mt-4 text-gray-500 text-[14px] md:text-[17px] leading-relaxed max-w-2xl mx-auto px-2 sm:px-0">
+        <p class="mx-auto mt-4 max-w-2xl px-2 text-[14px] leading-relaxed text-gray-500 sm:px-0 md:text-[17px]">
           Describe what you're building, and Laygent turns it into clean, usable product screens instantly.
           Focus on building, not figuring things out.
         </p>
       </div>
 
-      <div class="w-full max-w-2xl mt-6 md:mt-8 bg-white/60 backdrop-blur-md rounded-[28px] md:rounded-[40px] shadow-[0_10px_30px_rgba(0,0,0,0.06)] p-6 md:p-10"
-           style="border: 0.5px solid rgba(27,64,112,0.5);">
-
-        <h2 class="text-[16px] md:text-[18px] font-semibold text-[#223b63]">
+      <!-- WAITLIST CARD -->
+      <div
+        class="mt-6 w-full max-w-2xl rounded-[28px] bg-white/60 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.06)] backdrop-blur-md md:mt-8 md:rounded-[40px] md:p-10"
+        style="border: 0.5px solid rgba(27,64,112,0.5);"
+      >
+        <h2 class="text-[16px] font-semibold text-[#223b63] md:text-[18px]">
           Get Early Access to Laygent
         </h2>
 
-        <p class="text-[13px] md:text-[14px] text-gray-500 mt-1 mb-5 md:mb-6">
+        <p class="mt-1 mb-5 text-[13px] text-gray-500 md:mb-6 md:text-[14px]">
           Join the waitlist and get access as soon as we launch.
         </p>
 
-        <form action="https://formspree.io/f/YOUR_ID" method="POST"
-              class="flex flex-col sm:flex-row items-center gap-3">
-
+        <form
+          action="https://formspree.io/f/YOUR_ID"
+          method="POST"
+          class="flex w-full flex-col items-center gap-3 sm:flex-row"
+        >
           <input
             type="email"
             name="email"
             required
             placeholder="Enter your email address"
-            class="w-full sm:flex-1 border border-gray-300/70 bg-white/70 backdrop-blur-sm rounded-[999px] px-4 py-[12px] text-[14px] outline-none focus:ring-2 focus:ring-blue-400"
+            class="min-w-0 w-full sm:flex-1 rounded-[999px] border border-gray-300/70 bg-white/70 px-4 py-[12px] text-[14px] outline-none backdrop-blur-sm focus:ring-2 focus:ring-blue-400"
           />
 
           <button
             type="submit"
-            class="w-full sm:w-auto bg-[#223b63] text-white text-[14px] px-6 py-[12px] rounded-[999px] hover:opacity-90 transition">
+            class="w-full rounded-[999px] bg-[#223b63] px-6 py-[12px] text-[14px] text-white transition hover:opacity-90 sm:w-auto"
+          >
             Join waitlist →
           </button>
         </form>
 
-        <p class="text-[11px] text-gray-400 mt-4">
+        <p class="mt-4 text-[11px] text-gray-400">
           Get early access and product updates only.
         </p>
       </div>
     </div>
 
-    <div class="w-full max-w-6xl mx-auto flex justify-between text-[10px] md:text-[11px] text-gray-400 pt-6">
+    <!-- FOOTER -->
+    <div class="mx-auto flex w-full max-w-6xl justify-between pt-6 text-[10px] text-gray-400 md:text-[11px]">
       <span>© 2026 Laygent. All rights reserved.</span>
       <span>Built for builders.</span>
     </div>
