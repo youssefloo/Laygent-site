@@ -10,8 +10,8 @@
 
   <style>
     html, body {
-      height: 100%;
       margin: 0;
+      padding: 0;
     }
 
     body {
@@ -21,61 +21,51 @@
   </style>
 </head>
 
-<body class="relative h-screen overflow-hidden">
-  <!-- BACKGROUND BLOBS -->
+<body class="relative min-h-screen overflow-x-hidden">
   <div class="absolute top-[-140px] left-[-140px] w-[360px] h-[360px] bg-blue-300 opacity-25 blur-[140px] rounded-full pointer-events-none"></div>
   <div class="absolute bottom-[-140px] right-[-140px] w-[360px] h-[360px] bg-indigo-300 opacity-25 blur-[140px] rounded-full pointer-events-none"></div>
 
-  <!-- PAGE SHELL -->
-  <div class="relative z-10 h-full flex flex-col px-6 py-6">
+  <div class="relative z-10 min-h-screen flex flex-col px-6 py-6 md:h-screen md:overflow-hidden">
     
-    <!-- NAV -->
     <div class="w-full max-w-6xl mx-auto flex justify-between items-center">
-      
-      <!-- LOGO -->
       <div class="flex items-center gap-1 text-[#223b63]">
-        <span class="text-[22px] font-extrabold tracking-tight leading-none">LAY</span>
-        <span class="border border-[#223b63] px-2 py-[1px] rounded-[10px] text-[18px] font-extralight tracking-tight leading-none">
+        <span class="text-[20px] md:text-[22px] font-extrabold tracking-tight leading-none">LAY</span>
+        <span class="border border-[#223b63] px-2 py-[1px] rounded-[10px] text-[15px] md:text-[18px] font-extralight tracking-tight leading-none">
           GENT
         </span>
       </div>
 
-      <!-- PRIVATE BETA -->
       <div
-        class="text-[14px] px-4 py-[6px] rounded-full text-[#223b63] leading-none"
+        class="text-[12px] md:text-[14px] px-3 md:px-4 py-[6px] rounded-full text-[#223b63] leading-none"
         style="border: 0.5px solid rgba(27,64,112,0.5);"
       >
         Private Beta
       </div>
     </div>
 
-    <!-- CENTER CONTENT -->
-    <div class="flex-1 flex flex-col items-center justify-center">
-      
-      <!-- HERO -->
+    <div class="flex-1 flex flex-col items-center justify-center py-8 md:py-0">
       <div class="text-center max-w-3xl">
-        <h1 class="text-[34px] sm:text-[44px] md:text-[52px] font-semibold text-[#223b63] leading-[1.15]">
+        <h1 class="text-[28px] sm:text-[38px] md:text-[52px] font-semibold text-[#223b63] leading-[1.15]">
           Your Product Already Has
           <br class="hidden sm:block"/>
           a Structure.
           <span class="text-[#3b82f6]"> We Reveal It.</span>
         </h1>
 
-        <p class="mt-5 text-gray-500 text-[15px] md:text-[17px] leading-relaxed max-w-2xl mx-auto">
+        <p class="mt-4 text-gray-500 text-[14px] md:text-[17px] leading-relaxed max-w-2xl mx-auto px-2 sm:px-0">
           Describe what you're building, and Laygent turns it into clean, usable product screens instantly.
           Focus on building, not figuring things out.
         </p>
       </div>
 
-      <!-- WAITLIST CARD -->
-      <div class="w-full max-w-2xl mt-8 bg-white/60 backdrop-blur-md rounded-[40px] shadow-[0_10px_30px_rgba(0,0,0,0.06)] p-10"
+      <div class="w-full max-w-2xl mt-6 md:mt-8 bg-white/60 backdrop-blur-md rounded-[28px] md:rounded-[40px] shadow-[0_10px_30px_rgba(0,0,0,0.06)] p-6 md:p-10"
            style="border: 0.5px solid rgba(27,64,112,0.5);">
 
-        <h2 class="text-[18px] font-semibold text-[#223b63]">
+        <h2 class="text-[16px] md:text-[18px] font-semibold text-[#223b63]">
           Get Early Access to Laygent
         </h2>
 
-        <p class="text-[14px] text-gray-500 mt-1 mb-6">
+        <p class="text-[13px] md:text-[14px] text-gray-500 mt-1 mb-5 md:mb-6">
           Join the waitlist and get access as soon as we launch.
         </p>
 
@@ -103,8 +93,7 @@
       </div>
     </div>
 
-    <!-- FOOTER -->
-    <div class="w-full max-w-6xl mx-auto flex justify-between text-[11px] text-gray-400">
+    <div class="w-full max-w-6xl mx-auto flex justify-between text-[10px] md:text-[11px] text-gray-400 pt-6">
       <span>© 2026 Laygent. All rights reserved.</span>
       <span>Built for builders.</span>
     </div>
